@@ -13,3 +13,8 @@ Insecure coding practices or improper handling of data could lead to inadvertent
   If the data is logged without sanitizing the pipe symbol, it could expose sensitive data or cause misinterpretation of logs.
 ## Security Systems: 
 Intrusion detection or prevention systems might incorrectly interpret pipe symbols in log files or transmitted data as part of a potential attack.
+
+
+# Command Injection: 
+If user input containing | is passed directly to a shell or command-line interface, it could lead to an injection vulnerability. For example, in Unix-based systems, the pipe is used to chain commands together.
+Example: ls | rm -rf * could be dangerous if the | is interpreted as a command separator.
